@@ -1,6 +1,5 @@
-from fastapi import FastAPI, Response, Query, HTTPException, status
-from fastapi.encoders import jsonable_encoder
-from pydantic import BaseModel
+from fastapi import FastAPI, Query, HTTPException, status
+from pydantic import BaseModel, ValidationError
 from typing import Optional, List
 import logging
 
@@ -164,3 +163,14 @@ async def delete_cat(breed: str):
 
         else:
             raise HTTPException(status_code=404, detail="Cat not found.")
+
+
+# POST request of three cats
+@app.post("/add_three_cats", status_code=status.HTTP_201_CREATED)
+async def add_three_cats(cat: Cat):
+    await add_cat(cat, 'Bengal', 'United States', 1, 'Large', 'Orange')
+    await add_cat(cat, 'Maine Coon', 'United States', 3, 'Large', 'Brown Tabby')
+    await add_cat(cat, 'Peterbald', 'Russia', 0, 'Small', 'Grey')
+    logging.info('Cats added successfully.')
+
+    return {'status': 'http_201_created'}
