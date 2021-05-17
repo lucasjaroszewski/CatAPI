@@ -113,54 +113,52 @@ async def add_cat(cat: Cat,
 @app.patch("/cats/{breed}", response_model=Cat, status_code=status.HTTP_202_ACCEPTED)
 async def update_cat(cat: Cat,
                      breed: str,
-                     location_of_origin: str = None,
-                     coat_length: int = None,
-                     body_type: str = None,
-                     pattern: str = None):
+                     location_of_origin: str,
+                     coat_length: int,
+                     body_type: str,
+                     pattern: str):
+
+    update_cat = cat.dict()
 
     for cat in cats:
         if cat['breed'] == breed:
-            update_cat = cat
 
-            if location_of_origin:
-                location_of_origin = location_of_origin.capitalize()
-                logging.info('Cat of {} breed - Updated location of origin: {}'.format(breed, location_of_origin))
-                update_cat['location_of_origin'] = location_of_origin
+            breed = breed.capitalize()
+            update_cat['breed'] = breed
 
-            if coat_length:
-                update_cat['coat_length'] = coat_length
-                if coat_length < 0:
-                    logging.error('Coat length must be equal or greater than 0.')
-                    raise HTTPException(status_code=406, detail="Coat length must be equal or greater than 0.")
-                logging.info('Cat of {} breed - Updated coat length: {}'.format(breed, coat_length))
+            location_of_origin = location_of_origin.capitalize()
+            update_cat['location_of_origin'] = location_of_origin
 
-            if body_type:
-                body_type = body_type.capitalize()
-                update_cat['body_type'] = body_type
-                body_types = ['Small', 'Medium', 'Large']
+            update_cat['coat_length'] = coat_length
+            if coat_length < 0:
+                logging.error('Coat length must be equal or greater than 0.')
+                raise HTTPException(status_code=406, detail="Coat length must be equal or greater than 0.")
 
-                if body_type not in body_types:
-                    logging.error('Body type must be Small, Medium or Large')
-                    raise HTTPException(status_code=406, detail="Body type must be Small, Medium or Large")
-                logging.info('Cat of {} breed - Updated body type: {}'.format(breed, body_type))
+            body_type = body_type.capitalize()
+            update_cat['body_type'] = body_type
 
-            if pattern:
-                pattern = pattern.capitalize()
-                update_cat['pattern'] = pattern
-                logging.info('Cat of {} breed - Updated pattern: {}'.format(breed, pattern))
+            body_types = ['Small', 'Medium', 'Large']
+            if body_type not in body_types:
+                logging.error('Body type must be Small, Medium or Large')
+                raise HTTPException(status_code=406, detail="Body type must be Small, Medium or Large")
 
+            pattern = pattern.capitalize()
+            update_cat['pattern'] = pattern
+
+            cats.update(update_cat)
+            logging.info('Updated {} cat from {}, with {} coat length, {} body type and {} pattern.'.format(breed, update_cat['location_of_origin'], update_cat['coat_length'], update_cat['body_type'], update_cat['pattern']))
             return update_cat
+    else:
+        logging.warning('Cat not found.')
+        raise HTTPException(status_code=404, detail="Cat not found")
 
-        else:
-            raise HTTPException(status_code=404, detail="Cat not found.")
+
 
 
 @app.delete("/cats/{breed}")
 async def delete_cat(breed: str):
-
     for cat in cats:
-        if cat['breed'] == breed:
+        if (cat.breed == breed):
             return cats.remove(cat)
 
-        else:
-            raise HTTPException(status_code=404, detail="Cat not found.")
+    return Response(status_code=status.HTTP_204_NO_CONTENT)
