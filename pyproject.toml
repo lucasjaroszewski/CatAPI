@@ -8,6 +8,7 @@ authors = ["Lucas Jaroszewski <ljnunes@outlook.com.br>"]
 python = "^3.8"
 fastapi = "^0.65.1"
 uvicorn = "^0.13.4"
+logging = "^0.4.9"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
