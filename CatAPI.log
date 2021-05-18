@@ -962,3 +962,92 @@ response
 2021-05-18 11:51:54,519 - INFO: Started server process [2956]
 2021-05-18 11:51:54,519 - INFO: Waiting for application startup.
 2021-05-18 11:51:54,519 - INFO: Application startup complete.
+2021-05-18 11:52:12,331 - INFO: Started server process [15268]
+2021-05-18 11:52:12,332 - INFO: Waiting for application startup.
+2021-05-18 11:52:12,332 - INFO: Application startup complete.
+2021-05-18 11:54:53,838 - INFO: Started server process [3404]
+2021-05-18 11:54:53,838 - INFO: Waiting for application startup.
+2021-05-18 11:54:53,838 - INFO: Application startup complete.
+2021-05-18 11:54:56,314 - INFO: Started server process [9160]
+2021-05-18 11:54:56,314 - INFO: Waiting for application startup.
+2021-05-18 11:54:56,315 - INFO: Application startup complete.
+2021-05-18 11:55:20,436 - INFO: Started server process [12568]
+2021-05-18 11:55:20,437 - INFO: Waiting for application startup.
+2021-05-18 11:55:20,437 - INFO: Application startup complete.
+2021-05-18 11:55:27,613 - INFO: Ragdoll created successfully!
+2021-05-18 11:55:27,618 - ERROR: Breed already exists.
+2021-05-18 11:55:27,622 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:55:27,626 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:55:27,631 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:55:27,631 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 11:55:27,631 - INFO: Cat of Ragdoll breed - Updated body type: Small
+2021-05-18 11:55:27,631 - INFO: Cat of Ragdoll breed - Updated pattern: Black And White
+2021-05-18 11:55:27,640 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:55:27,640 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:55:27,645 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:55:27,645 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 11:55:27,645 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:57:16,076 - INFO: Started server process [11536]
+2021-05-18 11:57:16,076 - INFO: Waiting for application startup.
+2021-05-18 11:57:16,076 - INFO: Application startup complete.
+2021-05-18 11:57:22,032 - INFO: Ragdoll created successfully!
+2021-05-18 11:57:22,037 - ERROR: Breed already exists.
+2021-05-18 11:57:22,041 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:57:22,045 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:57:22,050 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:57:22,050 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 11:57:22,050 - INFO: Cat of Ragdoll breed - Updated body type: Small
+2021-05-18 11:57:22,050 - INFO: Cat of Ragdoll breed - Updated pattern: Black And White
+2021-05-18 11:57:22,058 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:57:22,058 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:57:22,063 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:57:22,063 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 11:57:22,063 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:57:57,449 - INFO: Started server process [6704]
+2021-05-18 11:57:57,449 - INFO: Waiting for application startup.
+2021-05-18 11:57:57,450 - INFO: Application startup complete.
+2021-05-18 11:58:06,777 - INFO: Ragdoll created successfully!
+2021-05-18 11:58:06,781 - ERROR: Breed already exists.
+2021-05-18 11:58:06,786 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:58:06,790 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:58:06,794 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:58:06,794 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 11:58:06,794 - INFO: Cat of Ragdoll breed - Updated body type: Small
+2021-05-18 11:58:06,794 - INFO: Cat of Ragdoll breed - Updated pattern: Black And White
+2021-05-18 11:58:06,803 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:58:06,803 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:58:06,807 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:58:06,807 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 11:58:06,807 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:58:12,117 - INFO: Started server process [8944]
+2021-05-18 11:58:12,117 - INFO: Waiting for application startup.
+2021-05-18 11:58:12,118 - INFO: Application startup complete.
+2021-05-18 12:00:25,598 - INFO: Started server process [6216]
+2021-05-18 12:00:25,598 - INFO: Waiting for application startup.
+2021-05-18 12:00:25,598 - INFO: Application startup complete.
+2021-05-18 12:02:34,724 - INFO: Started server process [6048]
+2021-05-18 12:02:34,725 - INFO: Waiting for application startup.
+2021-05-18 12:02:34,725 - INFO: Application startup complete.
+2021-05-18 12:03:31,865 - INFO: Started server process [10172]
+2021-05-18 12:03:31,866 - INFO: Waiting for application startup.
+2021-05-18 12:03:31,866 - INFO: Application startup complete.
+2021-05-18 12:03:35,419 - INFO: Ragdoll created successfully!
+2021-05-18 12:03:35,423 - ERROR: Breed already exists.
+2021-05-18 12:03:35,428 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 12:03:35,432 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 12:03:35,436 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 12:03:35,436 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 12:03:35,436 - INFO: Cat of Ragdoll breed - Updated body type: Small
+2021-05-18 12:03:35,437 - INFO: Cat of Ragdoll breed - Updated pattern: Black And White
+2021-05-18 12:03:35,446 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 12:03:35,446 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 12:03:35,450 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 12:03:35,450 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 12:03:35,450 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 12:03:35,459 - INFO: Bengal created successfully!
+2021-05-18 12:03:35,459 - INFO: Maine Coon created successfully!
+2021-05-18 12:03:35,459 - INFO: Peterbald created successfully!
+2021-05-18 12:03:35,459 - INFO: Cats added successfully.
+2021-05-18 12:06:04,977 - INFO: Started server process [9032]
+2021-05-18 12:06:04,977 - INFO: Waiting for application startup.
+2021-05-18 12:06:04,978 - INFO: Application startup complete.
