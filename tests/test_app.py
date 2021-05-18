@@ -106,5 +106,4 @@ def test_update_cat_invalid_body_type():
 # Validation of DELETE request
 def test_remove_cat():
     response = client.delete("/cats/Ragdoll")
-    assert response.status_code == 404
-    assert response.json() == {'detail': 'Cat not found.'}
+    assert response.status_code == 200
