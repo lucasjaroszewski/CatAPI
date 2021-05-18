@@ -336,3 +336,629 @@ response -> pattern
 2021-05-18 02:37:06,556 - INFO: Started server process [3868]
 2021-05-18 02:37:06,556 - INFO: Waiting for application startup.
 2021-05-18 02:37:06,556 - INFO: Application startup complete.
+2021-05-18 02:37:07,735 - INFO: Started server process [6400]
+2021-05-18 02:37:07,736 - INFO: Waiting for application startup.
+2021-05-18 02:37:07,736 - INFO: Application startup complete.
+2021-05-18 02:41:13,967 - INFO: Started server process [3948]
+2021-05-18 02:41:13,967 - INFO: Waiting for application startup.
+2021-05-18 02:41:13,968 - INFO: Application startup complete.
+2021-05-18 02:41:25,020 - INFO: Querying all cats that have Siamese as breed.
+2021-05-18 02:46:32,892 - INFO: Started server process [7356]
+2021-05-18 02:46:32,892 - INFO: Waiting for application startup.
+2021-05-18 02:46:32,892 - INFO: Application startup complete.
+2021-05-18 02:46:44,592 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 106, in update_cat
+    if [cat for cat in cats if cat["breed"] == (cat.breed)]:
+  File ".\app\main.py", line 106, in <listcomp>
+    if [cat for cat in cats if cat["breed"] == (cat.breed)]:
+AttributeError: 'dict' object has no attribute 'breed'
+2021-05-18 02:52:39,867 - INFO: Started server process [6528]
+2021-05-18 02:52:39,867 - INFO: Waiting for application startup.
+2021-05-18 02:52:39,868 - INFO: Application startup complete.
+2021-05-18 02:53:00,857 - INFO: Started server process [15896]
+2021-05-18 02:53:00,857 - INFO: Waiting for application startup.
+2021-05-18 02:53:00,858 - INFO: Application startup complete.
+2021-05-18 02:53:44,369 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 108, in update_cat
+    stored_cat_data = cats[breed]
+TypeError: list indices must be integers or slices, not str
+2021-05-18 03:00:39,002 - INFO: Started server process [4224]
+2021-05-18 03:00:39,002 - INFO: Waiting for application startup.
+2021-05-18 03:00:39,003 - INFO: Application startup complete.
+2021-05-18 03:00:41,206 - INFO: Started server process [5780]
+2021-05-18 03:00:41,206 - INFO: Waiting for application startup.
+2021-05-18 03:00:41,206 - INFO: Application startup complete.
+2021-05-18 03:01:02,649 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 105, in read_breed
+    return cats[breed]
+TypeError: list indices must be integers or slices, not str
+2021-05-18 03:01:10,109 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 105, in read_breed
+    return cats[breed]
+TypeError: list indices must be integers or slices, not str
+2021-05-18 03:01:10,475 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 105, in read_breed
+    return cats[breed]
+TypeError: list indices must be integers or slices, not str
+2021-05-18 03:01:11,180 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 105, in read_breed
+    return cats[breed]
+TypeError: list indices must be integers or slices, not str
+2021-05-18 03:01:14,785 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 105, in read_breed
+    return cats[breed]
+TypeError: list indices must be integers or slices, not str
+2021-05-18 03:01:15,944 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 105, in read_breed
+    return cats[breed]
+TypeError: list indices must be integers or slices, not str
+2021-05-18 03:01:34,794 - INFO: Started server process [5996]
+2021-05-18 03:01:34,794 - INFO: Waiting for application startup.
+2021-05-18 03:01:34,795 - INFO: Application startup complete.
+2021-05-18 03:01:36,655 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 105, in read_breed
+    return cats[breed]
+TypeError: list indices must be integers or slices, not str
+2021-05-18 03:01:40,749 - INFO: Started server process [14600]
+2021-05-18 03:01:40,749 - INFO: Waiting for application startup.
+2021-05-18 03:01:40,750 - INFO: Application startup complete.
+2021-05-18 03:01:47,277 - INFO: Started server process [9156]
+2021-05-18 03:01:47,278 - INFO: Waiting for application startup.
+2021-05-18 03:01:47,278 - INFO: Application startup complete.
+2021-05-18 03:01:47,798 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 105, in read_breed
+    return cats[breed]
+TypeError: list indices must be integers or slices, not str
+2021-05-18 03:01:58,870 - INFO: Started server process [8696]
+2021-05-18 03:01:58,871 - INFO: Waiting for application startup.
+2021-05-18 03:01:58,871 - INFO: Application startup complete.
+2021-05-18 03:04:36,788 - INFO: Started server process [8104]
+2021-05-18 03:04:36,788 - INFO: Waiting for application startup.
+2021-05-18 03:04:36,788 - INFO: Application startup complete.
+2021-05-18 03:04:40,006 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 105, in read_breed
+    return cats[breed]
+TypeError: list indices must be integers or slices, not str
+2021-05-18 03:04:45,582 - INFO: Started server process [14848]
+2021-05-18 03:04:45,583 - INFO: Waiting for application startup.
+2021-05-18 03:04:45,583 - INFO: Application startup complete.
+2021-05-18 03:04:45,857 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 105, in read_breed
+    return cats['breed']
+TypeError: list indices must be integers or slices, not str
+2021-05-18 03:05:03,002 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 113, in update_cat
+    stored_cat_data = cats['breed']
+TypeError: list indices must be integers or slices, not str
+2021-05-18 11:16:46,745 - INFO: Started server process [13236]
+2021-05-18 11:16:46,745 - INFO: Waiting for application startup.
+2021-05-18 11:16:46,746 - INFO: Application startup complete.
+2021-05-18 11:17:20,894 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\app\main.py", line 115, in update_cat
+    cat['location_of_origin'] = update_cat.location_of_origin.title()
+NameError: name 'cat' is not defined
+2021-05-18 11:33:42,177 - INFO: Started server process [15652]
+2021-05-18 11:33:42,178 - INFO: Waiting for application startup.
+2021-05-18 11:33:42,178 - INFO: Application startup complete.
+2021-05-18 11:33:49,232 - INFO: Cat of Siamese breed - Updated location of origin: string
+2021-05-18 11:33:49,232 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:33:58,771 - INFO: Cat of Siamese breed - Updated location of origin: string
+2021-05-18 11:33:58,771 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:35:19,207 - INFO: Started server process [6472]
+2021-05-18 11:35:19,207 - INFO: Waiting for application startup.
+2021-05-18 11:35:19,208 - INFO: Application startup complete.
+2021-05-18 11:35:22,600 - INFO: Cat of Siamese breed - Updated location of origin: string
+2021-05-18 11:35:22,600 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:35:38,110 - INFO: Started server process [2768]
+2021-05-18 11:35:38,111 - INFO: Waiting for application startup.
+2021-05-18 11:35:38,111 - INFO: Application startup complete.
+2021-05-18 11:35:40,984 - INFO: Cat of Siamese breed - Updated location of origin: string
+2021-05-18 11:35:40,984 - INFO: Cat of Siamese breed - Updated body type: small
+2021-05-18 11:35:40,984 - INFO: Cat of Siamese breed - Updated pattern: string
+2021-05-18 11:35:40,986 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 209, in app
+    response_data = await serialize_response(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 126, in serialize_response
+    raise ValidationError(errors, field.type_)
+pydantic.error_wrappers.ValidationError: 1 validation error for Cat
+response
+  value is not a valid dict (type=type_error.dict)
+2021-05-18 11:36:05,796 - INFO: Started server process [13112]
+2021-05-18 11:36:05,797 - INFO: Waiting for application startup.
+2021-05-18 11:36:05,797 - INFO: Application startup complete.
+2021-05-18 11:36:07,006 - INFO: Cat of Siamese breed - Updated location of origin: string
+2021-05-18 11:36:07,006 - INFO: Cat of Siamese breed - Updated body type: small
+2021-05-18 11:36:07,006 - INFO: Cat of Siamese breed - Updated pattern: string
+2021-05-18 11:36:09,438 - INFO: Cat of Siamese breed - Updated location of origin: string
+2021-05-18 11:36:09,438 - INFO: Cat of Siamese breed - Updated body type: small
+2021-05-18 11:36:09,439 - INFO: Cat of Siamese breed - Updated pattern: string
+2021-05-18 11:36:10,559 - INFO: Cat of Siamese breed - Updated location of origin: string
+2021-05-18 11:36:10,559 - INFO: Cat of Siamese breed - Updated body type: small
+2021-05-18 11:36:10,559 - INFO: Cat of Siamese breed - Updated pattern: string
+2021-05-18 11:36:11,388 - INFO: Cat of Siamese breed - Updated location of origin: string
+2021-05-18 11:36:11,388 - INFO: Cat of Siamese breed - Updated body type: small
+2021-05-18 11:36:11,388 - INFO: Cat of Siamese breed - Updated pattern: string
+2021-05-18 11:36:38,502 - INFO: Cat of Siamese breed - Updated location of origin: string
+2021-05-18 11:36:38,502 - INFO: Cat of Siamese breed - Updated coat length: 999
+2021-05-18 11:36:38,502 - INFO: Cat of Siamese breed - Updated body type: small
+2021-05-18 11:36:38,502 - INFO: Cat of Siamese breed - Updated pattern: string
+2021-05-18 11:43:25,178 - INFO: Started server process [1220]
+2021-05-18 11:43:25,178 - INFO: Waiting for application startup.
+2021-05-18 11:43:25,179 - INFO: Application startup complete.
+2021-05-18 11:43:56,752 - INFO: Ragdoll created successfully!
+2021-05-18 11:43:56,756 - ERROR: Breed already exists.
+2021-05-18 11:43:56,761 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:43:56,765 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:43:56,770 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:43:56,770 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 11:43:56,770 - INFO: Cat of Ragdoll breed - Updated body type: Small
+2021-05-18 11:43:56,770 - INFO: Cat of Ragdoll breed - Updated pattern: Black and White
+2021-05-18 11:44:14,703 - INFO: Started server process [6240]
+2021-05-18 11:44:14,703 - INFO: Waiting for application startup.
+2021-05-18 11:44:14,704 - INFO: Application startup complete.
+2021-05-18 11:44:28,558 - INFO: Ragdoll created successfully!
+2021-05-18 11:44:28,563 - ERROR: Breed already exists.
+2021-05-18 11:44:28,568 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:44:28,572 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:44:28,577 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:44:28,577 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 11:44:28,577 - INFO: Cat of Ragdoll breed - Updated body type: Small
+2021-05-18 11:44:28,577 - INFO: Cat of Ragdoll breed - Updated pattern: Black and White
+2021-05-18 11:44:54,405 - INFO: Started server process [6576]
+2021-05-18 11:44:54,406 - INFO: Waiting for application startup.
+2021-05-18 11:44:54,406 - INFO: Application startup complete.
+2021-05-18 11:44:58,280 - INFO: Ragdoll created successfully!
+2021-05-18 11:44:58,285 - ERROR: Breed already exists.
+2021-05-18 11:44:58,289 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:44:58,294 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:44:58,298 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:44:58,298 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 11:44:58,298 - INFO: Cat of Ragdoll breed - Updated body type: Small
+2021-05-18 11:44:58,298 - INFO: Cat of Ragdoll breed - Updated pattern: Black And White
+2021-05-18 11:47:03,094 - INFO: Started server process [5404]
+2021-05-18 11:47:03,095 - INFO: Waiting for application startup.
+2021-05-18 11:47:03,095 - INFO: Application startup complete.
+2021-05-18 11:47:16,926 - INFO: Ragdoll created successfully!
+2021-05-18 11:47:16,931 - ERROR: Breed already exists.
+2021-05-18 11:47:16,935 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:47:16,940 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:47:16,944 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:47:16,944 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 11:47:16,944 - INFO: Cat of Ragdoll breed - Updated body type: Small
+2021-05-18 11:47:16,945 - INFO: Cat of Ragdoll breed - Updated pattern: Black And White
+2021-05-18 11:47:35,766 - INFO: Started server process [14312]
+2021-05-18 11:47:35,766 - INFO: Waiting for application startup.
+2021-05-18 11:47:35,766 - INFO: Application startup complete.
+2021-05-18 11:47:43,864 - INFO: Ragdoll created successfully!
+2021-05-18 11:47:43,868 - ERROR: Breed already exists.
+2021-05-18 11:47:43,873 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:47:43,877 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:47:43,881 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:47:43,881 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 11:47:43,881 - INFO: Cat of Ragdoll breed - Updated body type: Small
+2021-05-18 11:47:43,881 - INFO: Cat of Ragdoll breed - Updated pattern: Black And White
+2021-05-18 11:47:43,886 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:47:43,886 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:48:39,436 - INFO: Started server process [14556]
+2021-05-18 11:48:39,436 - INFO: Waiting for application startup.
+2021-05-18 11:48:39,436 - INFO: Application startup complete.
+2021-05-18 11:48:45,096 - INFO: Ragdoll created successfully!
+2021-05-18 11:48:45,101 - ERROR: Breed already exists.
+2021-05-18 11:48:45,105 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:48:45,109 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:48:45,114 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:48:45,114 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 11:48:45,114 - INFO: Cat of Ragdoll breed - Updated body type: Small
+2021-05-18 11:48:45,114 - INFO: Cat of Ragdoll breed - Updated pattern: Black And White
+2021-05-18 11:48:45,119 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:48:45,119 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 11:48:45,123 - INFO: Cat of Ragdoll breed - Updated location of origin: Russia
+2021-05-18 11:48:45,123 - INFO: Cat of Ragdoll breed - Updated coat length: 5
+2021-05-18 11:48:45,123 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 11:51:20,659 - INFO: Started server process [5012]
+2021-05-18 11:51:20,659 - INFO: Waiting for application startup.
+2021-05-18 11:51:20,660 - INFO: Application startup complete.
+2021-05-18 11:51:54,519 - INFO: Started server process [2956]
+2021-05-18 11:51:54,519 - INFO: Waiting for application startup.
+2021-05-18 11:51:54,519 - INFO: Application startup complete.

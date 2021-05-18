@@ -1,4 +1,5 @@
-from fastapi import FastAPI, Query, HTTPException, status
+from fastapi import FastAPI, HTTPException, status
+from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 from typing import Optional, List
 import logging
@@ -40,27 +41,31 @@ cats = [
 
 # CRUD Configuration
 @app.get("/cats", response_model=List[Cat], status_code=status.HTTP_200_OK)
-async def get_cats():
+async def get_cats(breed: Optional[str] = None,
+                   location_of_origin: Optional[str] = None,
+                   coat_length: Optional[int] = None,
+                   body_type: Optional[str] = None,
+                   pattern: Optional[str] = None):
 
-#    if breed:
-#        logging.info('Querying all cats that have {} as breed.'.format(breed))
-#        return [cat for cat in cats if cat["breed"] == breed]
-#
-#    if location_of_origin:
-#        logging.info('Querying all cats that have {} as location of origin.'.format(location_of_origin))
-#        return [cat for cat in cats if cat["location_of_origin"] == location_of_origin]
-#
-#    if coat_length:
-#        logging.info('Querying all cats that have {} as coat length.'.format(coat_length))
-#        return [cat for cat in cats if cat["coat_length"] == coat_length]
-#
-#    if body_type:
-#        logging.info('Querying all cats that have {} as body type.'.format(body_type))
-#        return [cat for cat in cats if cat["body_type"] == body_type]
-#
-#    if pattern:
-#        logging.info('Querying all cats that have {} as pattern.'.format(pattern))
-#        return [cat for cat in cats if cat["pattern"] == pattern]
+    if breed:
+        logging.info('Querying all cats that have {} as breed.'.format(breed))
+        return [cat for cat in cats if cat["breed"] == breed]
+
+    if location_of_origin:
+        logging.info('Querying all cats that have {} as location of origin.'.format(location_of_origin))
+        return [cat for cat in cats if cat["location_of_origin"] == location_of_origin]
+
+    if coat_length:
+        logging.info('Querying all cats that have {} as coat length.'.format(coat_length))
+        return [cat for cat in cats if cat["coat_length"] == coat_length]
+
+    if body_type:
+        logging.info('Querying all cats that have {} as body type.'.format(body_type))
+        return [cat for cat in cats if cat["body_type"] == body_type]
+
+    if pattern:
+        logging.info('Querying all cats that have {} as pattern.'.format(pattern))
+        return [cat for cat in cats if cat["pattern"] == pattern]
 
     return cats
 
@@ -95,49 +100,50 @@ async def add_cat(new_cat: Cat):
     return new_cat
 
 
-@app.patch("/cats/{breed}", response_model=Cat, status_code=status.HTTP_202_ACCEPTED)
-async def update_cat(cat: Cat,
-                     breed: str,
-                     location_of_origin: str = None,
-                     coat_length: int = None,
-                     body_type: str = None,
-                     pattern: str = None):
+@app.get("/cats/{breed}", response_model=Cat)
+async def read_breed(breed: str):
+    return cats['breed']
 
+
+@app.patch("/cats/{breed}", response_model=Cat, status_code=status.HTTP_202_ACCEPTED)
+async def update_cat(breed: str, query_cat: Cat):
+
+    # Validation: Check if breed is NOT unique
     for cat in cats:
         if cat['breed'] == breed:
-            update_cat = cat
 
-            if location_of_origin:
-                location_of_origin = location_of_origin.capitalize()
-                logging.info('Cat of {} breed - Updated location of origin: {}'.format(breed, location_of_origin))
-                update_cat['location_of_origin'] = location_of_origin
+            # Validation: Check if there is a location of origin to update
+            if query_cat.location_of_origin:
+                cat['location_of_origin'] = query_cat.location_of_origin.title()
+                logging.info('Cat of {} breed - Updated location of origin: {}'.format(breed, (query_cat.location_of_origin)))
 
-            if coat_length:
-                update_cat['coat_length'] = coat_length
-                if coat_length < 0:
+            # Validation: Check if there is a positive integer coat length to update
+            if query_cat.coat_length:
+                cat['coat_length'] = query_cat.coat_length
+                if (query_cat.coat_length) < 0:
                     logging.error('Coat length must be equal or greater than 0.')
                     raise HTTPException(status_code=406, detail="Coat length must be equal or greater than 0.")
-                logging.info('Cat of {} breed - Updated coat length: {}'.format(breed, coat_length))
+                logging.info('Cat of {} breed - Updated coat length: {}'.format(breed, (query_cat.coat_length)))
 
-            if body_type:
-                body_type = body_type.capitalize()
-                update_cat['body_type'] = body_type
+            # Validation: Check if there is a valid body type to update
+            if query_cat.body_type:
+                cat['body_type'] = query_cat.body_type.capitalize()
                 body_types = ['Small', 'Medium', 'Large']
 
-                if body_type not in body_types:
+                if query_cat.body_type.capitalize() not in body_types:
                     logging.error('Body type must be Small, Medium or Large')
                     raise HTTPException(status_code=406, detail="Body type must be Small, Medium or Large")
-                logging.info('Cat of {} breed - Updated body type: {}'.format(breed, body_type))
+                logging.info('Cat of {} breed - Updated body type: {}'.format(breed, (query_cat.body_type)))
 
-            if pattern:
-                pattern = pattern.capitalize()
-                update_cat['pattern'] = pattern
-                logging.info('Cat of {} breed - Updated pattern: {}'.format(breed, pattern))
+            # Validation: Check if there is a pattern to update
+            if query_cat.pattern:
+                cat['pattern'] = query_cat.pattern.title()
+                logging.info('Cat of {} breed - Updated pattern: {}'.format(breed, (query_cat.pattern)))
 
-            return update_cat
+            return cat
 
-        else:
-            raise HTTPException(status_code=404, detail="Cat not found.")
+    else:
+        raise HTTPException(status_code=404, detail="Cat not found.")
 
 
 @app.delete("/cats/{breed}")
