@@ -1,5 +1,4 @@
 from fastapi import FastAPI, HTTPException, status
-from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 from typing import Optional, List
 import logging
@@ -9,8 +8,10 @@ logging.basicConfig(filename='CatAPI.log',
                     level=logging.INFO,
                     format='%(asctime)s - %(levelname)s: %(message)s')
 
+
 # FastAPI Configuration
 app = FastAPI()
+
 
 # Models Configuration
 class Cat(BaseModel):
@@ -21,6 +22,7 @@ class Cat(BaseModel):
     pattern: str
 
 
+# Initial Cat Database
 cats = [
     {
         'breed': 'Siamese',
@@ -47,26 +49,32 @@ async def get_cats(breed: Optional[str] = None,
                    body_type: Optional[str] = None,
                    pattern: Optional[str] = None):
 
+    # Query: Only show cats with the same breed
     if breed:
         logging.info('Querying all cats that have {} as breed.'.format(breed))
         return [cat for cat in cats if cat["breed"] == breed]
 
+    # Query: Only show cats with the same location of origin
     if location_of_origin:
         logging.info('Querying all cats that have {} as location of origin.'.format(location_of_origin))
         return [cat for cat in cats if cat["location_of_origin"] == location_of_origin]
 
+    # Query: Only show cats with the same coat length
     if coat_length:
         logging.info('Querying all cats that have {} as coat length.'.format(coat_length))
         return [cat for cat in cats if cat["coat_length"] == coat_length]
 
+    # Query: Only show cats with the same body type
     if body_type:
         logging.info('Querying all cats that have {} as body type.'.format(body_type))
         return [cat for cat in cats if cat["body_type"] == body_type]
 
+    # Query: Only show cats with the same pattern
     if pattern:
         logging.info('Querying all cats that have {} as pattern.'.format(pattern))
         return [cat for cat in cats if cat["pattern"] == pattern]
 
+    # If no query was input, show all cats
     return cats
 
 
@@ -98,11 +106,6 @@ async def add_cat(new_cat: Cat):
     cats.append(new_cat.dict())
     logging.info('{} created successfully!'.format((new_cat.breed)))
     return new_cat
-
-
-@app.get("/cats/{breed}", response_model=Cat)
-async def read_breed(breed: str):
-    return cats['breed']
 
 
 @app.patch("/cats/{breed}", response_model=Cat, status_code=status.HTTP_202_ACCEPTED)
@@ -149,12 +152,13 @@ async def update_cat(breed: str, query_cat: Cat):
 @app.delete("/cats/{breed}")
 async def delete_cat(breed: str):
 
+    # Validation: Check if the breed exists
     for cat in cats:
         if cat['breed'] == breed:
             return cats.remove(cat)
 
-        else:
-            raise HTTPException(status_code=404, detail="Cat not found.")
+    else:
+        raise HTTPException(status_code=404, detail="Cat not found.")
 
 
 # POST request of three cats

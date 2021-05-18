@@ -19,6 +19,13 @@ def test_add_cat():
     assert response.json() == data
 
 
+# Validation of GET Request
+def test_get_cats():
+    response = client.get("/cats", json=data)
+    assert response.status_code == 200
+    assert data in response.json()
+
+
 # Validation of unique breed
 def test_add_cat_same_breed():
     response = client.post("/cats", json=data)
