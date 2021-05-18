@@ -1,39 +1,338 @@
-2021-05-17 13:58:14,474 - INFO: Started server process [3596]
-2021-05-17 13:58:14,474 - INFO: Waiting for application startup.
-2021-05-17 13:58:14,475 - INFO: Application startup complete.
-2021-05-17 13:58:19,262 - INFO: Added Bengal cat cat from United states, with 1 coat length, Large body type and Orange pattern.
-2021-05-17 13:59:04,877 - INFO: Started server process [3560]
-2021-05-17 13:59:04,878 - INFO: Waiting for application startup.
-2021-05-17 13:59:04,878 - INFO: Application startup complete.
-2021-05-17 13:59:08,363 - INFO: Added Bengal cat cat from United states, with 1 coat length, Large body type and Orange pattern.
-2021-05-17 13:59:08,364 - ERROR: Breed already exists.
-2021-05-17 14:14:43,801 - INFO: Started server process [10428]
-2021-05-17 14:14:43,801 - INFO: Waiting for application startup.
-2021-05-17 14:14:43,801 - INFO: Application startup complete.
-2021-05-17 14:28:15,087 - INFO: Started server process [14148]
-2021-05-17 14:28:15,087 - INFO: Waiting for application startup.
-2021-05-17 14:28:15,087 - INFO: Application startup complete.
-2021-05-17 14:28:25,288 - INFO: Added Bengal cat cat from United states, with 1 coat length, Large body type and Orange pattern.
-2021-05-17 14:28:25,288 - INFO: Added Maine coon cat from United states, with 3 coat length, Large body type and Brown tabby pattern.
-2021-05-17 14:28:25,288 - INFO: Added Peterbald cat from Russia, with 0 coat length, Small body type and Grey pattern.
-2021-05-17 14:29:22,136 - INFO: Started server process [10744]
-2021-05-17 14:29:22,137 - INFO: Waiting for application startup.
-2021-05-17 14:29:22,137 - INFO: Application startup complete.
-2021-05-17 14:29:31,117 - INFO: Started server process [15188]
-2021-05-17 14:29:31,117 - INFO: Waiting for application startup.
-2021-05-17 14:29:31,118 - INFO: Application startup complete.
-2021-05-17 14:29:35,692 - INFO: Started server process [4652]
-2021-05-17 14:29:35,694 - INFO: Waiting for application startup.
-2021-05-17 14:29:35,695 - INFO: Application startup complete.
-2021-05-17 14:29:45,516 - INFO: Added Bengal cat cat from United states, with 1 coat length, Large body type and Orange pattern.
-2021-05-17 14:29:45,516 - INFO: Added Maine coon cat from United states, with 3 coat length, Large body type and Brown tabby pattern.
-2021-05-17 14:29:45,516 - INFO: Added Peterbald cat from Russia, with 0 coat length, Small body type and Grey pattern.
-2021-05-17 14:29:45,516 - INFO: Gatos adicionados com sucesso.
-2021-05-17 14:30:22,111 - INFO: Started server process [2184]
-2021-05-17 14:30:22,112 - INFO: Waiting for application startup.
-2021-05-17 14:30:22,112 - INFO: Application startup complete.
-2021-05-17 14:30:32,412 - INFO: Added Bengal cat from United states, with 1 coat length, Large body type and Orange pattern.
-2021-05-17 14:30:32,412 - INFO: Added Maine coon cat from United states, with 3 coat length, Large body type and Brown tabby pattern.
-2021-05-17 14:30:32,412 - INFO: Added Peterbald cat from Russia, with 0 coat length, Small body type and Grey pattern.
-2021-05-17 14:30:32,412 - INFO: Cats added successfully.
-2021-05-17 14:30:43,024 - ERROR: Breed already exists.
+2021-05-18 01:05:05,265 - ERROR: Breed already exists.
+2021-05-18 01:07:02,845 - INFO: Started server process [14912]
+2021-05-18 01:07:02,845 - INFO: Waiting for application startup.
+2021-05-18 01:07:02,845 - INFO: Application startup complete.
+2021-05-18 01:07:18,161 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 01:07:21,885 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 01:07:31,103 - ERROR: Maine Coon2 created successfully!
+2021-05-18 01:07:55,679 - INFO: Started server process [15568]
+2021-05-18 01:07:55,679 - INFO: Waiting for application startup.
+2021-05-18 01:07:55,679 - INFO: Application startup complete.
+2021-05-18 01:09:20,212 - INFO: Started server process [4072]
+2021-05-18 01:09:20,212 - INFO: Waiting for application startup.
+2021-05-18 01:09:20,213 - INFO: Application startup complete.
+2021-05-18 01:09:22,976 - INFO: Maine Coon2 created successfully!
+2021-05-18 01:09:22,977 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 209, in app
+    response_data = await serialize_response(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 126, in serialize_response
+    raise ValidationError(errors, field.type_)
+pydantic.error_wrappers.ValidationError: 5 validation errors for Cat
+response -> breed
+  field required (type=value_error.missing)
+response -> location_of_origin
+  field required (type=value_error.missing)
+response -> coat_length
+  field required (type=value_error.missing)
+response -> body_type
+  field required (type=value_error.missing)
+response -> pattern
+  field required (type=value_error.missing)
+2021-05-18 01:09:26,674 - INFO: Maine Coon created successfully!
+2021-05-18 01:09:26,675 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 209, in app
+    response_data = await serialize_response(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 126, in serialize_response
+    raise ValidationError(errors, field.type_)
+pydantic.error_wrappers.ValidationError: 5 validation errors for Cat
+response -> breed
+  field required (type=value_error.missing)
+response -> location_of_origin
+  field required (type=value_error.missing)
+response -> coat_length
+  field required (type=value_error.missing)
+response -> body_type
+  field required (type=value_error.missing)
+response -> pattern
+  field required (type=value_error.missing)
+2021-05-18 01:09:40,846 - INFO: Started server process [4860]
+2021-05-18 01:09:40,846 - INFO: Waiting for application startup.
+2021-05-18 01:09:40,847 - INFO: Application startup complete.
+2021-05-18 01:09:43,752 - INFO: Maine Coon created successfully!
+2021-05-18 01:09:44,873 - ERROR: Breed already exists.
+2021-05-18 01:09:50,576 - INFO: Maine Coonadsdsa created successfully!
+2021-05-18 01:10:00,592 - INFO: Started server process [13956]
+2021-05-18 01:10:00,592 - INFO: Waiting for application startup.
+2021-05-18 01:10:00,593 - INFO: Application startup complete.
+2021-05-18 01:10:02,343 - INFO: Maine Coonadsdsa created successfully!
+2021-05-18 01:10:02,344 - ERROR: Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 209, in app
+    response_data = await serialize_response(
+  File "c:\users\lucas\appdata\local\pypoetry\cache\virtualenvs\app-r1mvpay6-py3.8\lib\site-packages\fastapi\routing.py", line 126, in serialize_response
+    raise ValidationError(errors, field.type_)
+pydantic.error_wrappers.ValidationError: 5 validation errors for Cat
+response -> breed
+  field required (type=value_error.missing)
+response -> location_of_origin
+  field required (type=value_error.missing)
+response -> coat_length
+  field required (type=value_error.missing)
+response -> body_type
+  field required (type=value_error.missing)
+response -> pattern
+  field required (type=value_error.missing)
+2021-05-18 01:10:11,433 - INFO: Started server process [15996]
+2021-05-18 01:10:11,433 - INFO: Waiting for application startup.
+2021-05-18 01:10:11,433 - INFO: Application startup complete.
+2021-05-18 01:11:41,690 - INFO: Started server process [9804]
+2021-05-18 01:11:41,690 - INFO: Waiting for application startup.
+2021-05-18 01:11:41,690 - INFO: Application startup complete.
+2021-05-18 01:12:57,620 - INFO: Ragdoll created successfully!
+2021-05-18 01:13:16,907 - INFO: Started server process [5800]
+2021-05-18 01:13:16,907 - INFO: Waiting for application startup.
+2021-05-18 01:13:16,908 - INFO: Application startup complete.
+2021-05-18 01:13:30,853 - INFO: Ragdoll created successfully!
+2021-05-18 01:15:07,085 - INFO: Started server process [15476]
+2021-05-18 01:15:07,085 - INFO: Waiting for application startup.
+2021-05-18 01:15:07,086 - INFO: Application startup complete.
+2021-05-18 01:16:33,705 - INFO: Started server process [1576]
+2021-05-18 01:16:33,705 - INFO: Waiting for application startup.
+2021-05-18 01:16:33,705 - INFO: Application startup complete.
+2021-05-18 01:16:37,722 - INFO: Ragdoll created successfully!
+2021-05-18 01:17:56,286 - INFO: Started server process [5420]
+2021-05-18 01:17:56,286 - INFO: Waiting for application startup.
+2021-05-18 01:17:56,287 - INFO: Application startup complete.
+2021-05-18 01:21:10,252 - INFO: Started server process [9172]
+2021-05-18 01:21:10,253 - INFO: Waiting for application startup.
+2021-05-18 01:21:10,253 - INFO: Application startup complete.
+2021-05-18 01:22:50,596 - INFO: Ragdoll created successfully!
+2021-05-18 01:23:27,894 - INFO: Started server process [12788]
+2021-05-18 01:23:27,894 - INFO: Waiting for application startup.
+2021-05-18 01:23:27,894 - INFO: Application startup complete.
+2021-05-18 01:23:32,370 - INFO: Ragdoll created successfully!
+2021-05-18 01:29:31,575 - INFO: Started server process [9352]
+2021-05-18 01:29:31,576 - INFO: Waiting for application startup.
+2021-05-18 01:29:31,576 - INFO: Application startup complete.
+2021-05-18 01:29:53,767 - INFO: Bengal created successfully!
+2021-05-18 01:29:53,767 - INFO: Maine Coon created successfully!
+2021-05-18 01:29:53,768 - INFO: Peterbald created successfully!
+2021-05-18 01:29:53,768 - INFO: Cats added successfully.
+2021-05-18 01:30:10,341 - ERROR: Breed already exists.
+2021-05-18 01:30:50,462 - INFO: Started server process [9120]
+2021-05-18 01:30:50,463 - INFO: Waiting for application startup.
+2021-05-18 01:30:50,463 - INFO: Application startup complete.
+2021-05-18 01:31:13,559 - INFO: Bengal created successfully!
+2021-05-18 01:31:13,559 - INFO: Maine Coon created successfully!
+2021-05-18 01:31:13,559 - INFO: Peterbald created successfully!
+2021-05-18 01:31:13,559 - INFO: Cats added successfully.
+2021-05-18 01:32:28,634 - INFO: Ragdoll created successfully!
+2021-05-18 01:35:19,244 - INFO: Started server process [13548]
+2021-05-18 01:35:19,244 - INFO: Waiting for application startup.
+2021-05-18 01:35:19,244 - INFO: Application startup complete.
+2021-05-18 01:35:29,018 - INFO: Ragdoll created successfully!
+2021-05-18 01:36:16,799 - INFO: Started server process [14460]
+2021-05-18 01:36:16,799 - INFO: Waiting for application startup.
+2021-05-18 01:36:16,800 - INFO: Application startup complete.
+2021-05-18 01:36:20,074 - INFO: Ragdoll created successfully!
+2021-05-18 01:36:27,424 - INFO: Started server process [9280]
+2021-05-18 01:36:27,424 - INFO: Waiting for application startup.
+2021-05-18 01:36:27,424 - INFO: Application startup complete.
+2021-05-18 01:37:17,006 - INFO: Started server process [5536]
+2021-05-18 01:37:17,006 - INFO: Waiting for application startup.
+2021-05-18 01:37:17,007 - INFO: Application startup complete.
+2021-05-18 01:37:20,730 - INFO: Started server process [6408]
+2021-05-18 01:37:20,731 - INFO: Waiting for application startup.
+2021-05-18 01:37:20,731 - INFO: Application startup complete.
+2021-05-18 01:37:26,869 - INFO: Ragdoll created successfully!
+2021-05-18 01:37:31,511 - INFO: Started server process [8448]
+2021-05-18 01:37:31,512 - INFO: Waiting for application startup.
+2021-05-18 01:37:31,512 - INFO: Application startup complete.
+2021-05-18 01:37:35,574 - INFO: Started server process [15500]
+2021-05-18 01:37:35,574 - INFO: Waiting for application startup.
+2021-05-18 01:37:35,574 - INFO: Application startup complete.
+2021-05-18 01:40:50,414 - INFO: Ragdoll created successfully!
+2021-05-18 01:43:47,896 - INFO: Started server process [14880]
+2021-05-18 01:43:47,896 - INFO: Waiting for application startup.
+2021-05-18 01:43:47,896 - INFO: Application startup complete.
+2021-05-18 01:46:52,870 - INFO: Started server process [5784]
+2021-05-18 01:46:52,870 - INFO: Waiting for application startup.
+2021-05-18 01:46:52,870 - INFO: Application startup complete.
+2021-05-18 01:47:09,259 - INFO: Ragdoll created successfully!
+2021-05-18 01:47:34,311 - INFO: Started server process [9684]
+2021-05-18 01:47:34,312 - INFO: Waiting for application startup.
+2021-05-18 01:47:34,312 - INFO: Application startup complete.
+2021-05-18 01:47:46,846 - INFO: Ragdoll created successfully!
+2021-05-18 01:50:37,104 - INFO: Ragdoll created successfully!
+2021-05-18 01:53:05,381 - INFO: Ragdoll created successfully!
+2021-05-18 01:53:50,866 - INFO: Ragdoll created successfully!
+2021-05-18 01:57:05,076 - INFO: Ragdoll created successfully!
+2021-05-18 01:57:27,776 - INFO: Ragdoll created successfully!
+2021-05-18 02:00:09,941 - INFO: Started server process [2820]
+2021-05-18 02:00:09,941 - INFO: Waiting for application startup.
+2021-05-18 02:00:09,942 - INFO: Application startup complete.
+2021-05-18 02:00:48,994 - INFO: Ragdoll created successfully!
+2021-05-18 02:00:56,570 - INFO: Ragdoll created successfully!
+2021-05-18 02:04:57,238 - INFO: Started server process [6508]
+2021-05-18 02:04:57,238 - INFO: Waiting for application startup.
+2021-05-18 02:04:57,238 - INFO: Application startup complete.
+2021-05-18 02:07:48,755 - INFO: Started server process [11556]
+2021-05-18 02:07:48,755 - INFO: Waiting for application startup.
+2021-05-18 02:07:48,755 - INFO: Application startup complete.
+2021-05-18 02:08:04,576 - INFO: Ragdoll created successfully!
+2021-05-18 02:09:02,256 - INFO: Started server process [11560]
+2021-05-18 02:09:02,256 - INFO: Waiting for application startup.
+2021-05-18 02:09:02,256 - INFO: Application startup complete.
+2021-05-18 02:09:06,105 - INFO: Ragdoll created successfully!
+2021-05-18 02:09:21,252 - INFO: Started server process [7280]
+2021-05-18 02:09:21,253 - INFO: Waiting for application startup.
+2021-05-18 02:09:21,253 - INFO: Application startup complete.
+2021-05-18 02:11:48,192 - INFO: Started server process [9976]
+2021-05-18 02:11:48,192 - INFO: Waiting for application startup.
+2021-05-18 02:11:48,193 - INFO: Application startup complete.
+2021-05-18 02:12:00,101 - INFO: Started server process [4420]
+2021-05-18 02:12:00,101 - INFO: Waiting for application startup.
+2021-05-18 02:12:00,102 - INFO: Application startup complete.
+2021-05-18 02:12:15,546 - INFO: Ragdoll created successfully!
+2021-05-18 02:14:23,670 - INFO: Started server process [9196]
+2021-05-18 02:14:23,670 - INFO: Waiting for application startup.
+2021-05-18 02:14:23,670 - INFO: Application startup complete.
+2021-05-18 02:14:36,598 - INFO: Ragdoll created successfully!
+2021-05-18 02:14:59,767 - INFO: Started server process [4584]
+2021-05-18 02:14:59,768 - INFO: Waiting for application startup.
+2021-05-18 02:14:59,768 - INFO: Application startup complete.
+2021-05-18 02:15:09,939 - INFO: Ragdoll created successfully!
+2021-05-18 02:15:24,295 - INFO: Started server process [12816]
+2021-05-18 02:15:24,296 - INFO: Waiting for application startup.
+2021-05-18 02:15:24,296 - INFO: Application startup complete.
+2021-05-18 02:15:25,963 - INFO: Started server process [4904]
+2021-05-18 02:15:25,963 - INFO: Waiting for application startup.
+2021-05-18 02:15:25,964 - INFO: Application startup complete.
+2021-05-18 02:15:29,801 - INFO: Ragdoll created successfully!
+2021-05-18 02:16:25,141 - INFO: Started server process [12436]
+2021-05-18 02:16:25,141 - INFO: Waiting for application startup.
+2021-05-18 02:16:25,141 - INFO: Application startup complete.
+2021-05-18 02:16:47,989 - INFO: Started server process [9004]
+2021-05-18 02:16:47,989 - INFO: Waiting for application startup.
+2021-05-18 02:16:47,989 - INFO: Application startup complete.
+2021-05-18 02:17:09,596 - INFO: Started server process [15552]
+2021-05-18 02:17:09,596 - INFO: Waiting for application startup.
+2021-05-18 02:17:09,597 - INFO: Application startup complete.
+2021-05-18 02:18:54,905 - INFO: Started server process [16296]
+2021-05-18 02:18:54,905 - INFO: Waiting for application startup.
+2021-05-18 02:18:54,906 - INFO: Application startup complete.
+2021-05-18 02:19:10,594 - INFO: Ragdoll created successfully!
+2021-05-18 02:19:53,608 - INFO: Started server process [15504]
+2021-05-18 02:19:53,608 - INFO: Waiting for application startup.
+2021-05-18 02:19:53,608 - INFO: Application startup complete.
+2021-05-18 02:20:00,617 - INFO: Ragdoll created successfully!
+2021-05-18 02:20:20,644 - INFO: Started server process [5760]
+2021-05-18 02:20:20,644 - INFO: Waiting for application startup.
+2021-05-18 02:20:20,645 - INFO: Application startup complete.
+2021-05-18 02:20:27,679 - INFO: Ragdoll created successfully!
+2021-05-18 02:20:45,088 - INFO: Started server process [2332]
+2021-05-18 02:20:45,089 - INFO: Waiting for application startup.
+2021-05-18 02:20:45,089 - INFO: Application startup complete.
+2021-05-18 02:20:49,437 - INFO: Ragdoll created successfully!
+2021-05-18 02:25:50,358 - INFO: Started server process [780]
+2021-05-18 02:25:50,359 - INFO: Waiting for application startup.
+2021-05-18 02:25:50,359 - INFO: Application startup complete.
+2021-05-18 02:26:04,212 - INFO: Ragdoll created successfully!
+2021-05-18 02:26:04,217 - ERROR: Breed already exists.
+2021-05-18 02:26:27,313 - INFO: Started server process [14628]
+2021-05-18 02:26:27,313 - INFO: Waiting for application startup.
+2021-05-18 02:26:27,314 - INFO: Application startup complete.
+2021-05-18 02:26:31,953 - INFO: Ragdoll created successfully!
+2021-05-18 02:26:31,957 - ERROR: Breed already exists.
+2021-05-18 02:30:27,356 - INFO: Started server process [4868]
+2021-05-18 02:30:27,357 - INFO: Waiting for application startup.
+2021-05-18 02:30:27,357 - INFO: Application startup complete.
+2021-05-18 02:30:41,949 - INFO: Ragdoll created successfully!
+2021-05-18 02:30:41,953 - ERROR: Breed already exists.
+2021-05-18 02:30:41,958 - ERROR: Breed already exists.
+2021-05-18 02:32:00,050 - INFO: Started server process [15308]
+2021-05-18 02:32:00,051 - INFO: Waiting for application startup.
+2021-05-18 02:32:00,051 - INFO: Application startup complete.
+2021-05-18 02:32:13,350 - INFO: Started server process [8212]
+2021-05-18 02:32:13,350 - INFO: Waiting for application startup.
+2021-05-18 02:32:13,351 - INFO: Application startup complete.
+2021-05-18 02:32:21,630 - INFO: Ragdoll created successfully!
+2021-05-18 02:32:21,635 - ERROR: Breed already exists.
+2021-05-18 02:32:21,639 - ERROR: Breed already exists.
+2021-05-18 02:32:52,258 - INFO: Started server process [13956]
+2021-05-18 02:32:52,259 - INFO: Waiting for application startup.
+2021-05-18 02:32:52,259 - INFO: Application startup complete.
+2021-05-18 02:32:59,942 - INFO: Ragdoll created successfully!
+2021-05-18 02:32:59,947 - ERROR: Breed already exists.
+2021-05-18 02:32:59,952 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 02:35:25,675 - INFO: Started server process [4092]
+2021-05-18 02:35:25,676 - INFO: Waiting for application startup.
+2021-05-18 02:35:25,676 - INFO: Application startup complete.
+2021-05-18 02:35:48,340 - INFO: Started server process [16060]
+2021-05-18 02:35:48,340 - INFO: Waiting for application startup.
+2021-05-18 02:35:48,341 - INFO: Application startup complete.
+2021-05-18 02:35:56,337 - INFO: Ragdoll created successfully!
+2021-05-18 02:35:56,342 - ERROR: Breed already exists.
+2021-05-18 02:35:56,346 - ERROR: Coat length must be equal or greater than 0.
+2021-05-18 02:35:56,350 - ERROR: Body type must be Small, Medium or Large
+2021-05-18 02:37:06,556 - INFO: Started server process [3868]
+2021-05-18 02:37:06,556 - INFO: Waiting for application startup.
+2021-05-18 02:37:06,556 - INFO: Application startup complete.

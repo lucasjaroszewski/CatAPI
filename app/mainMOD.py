@@ -39,60 +39,62 @@ cats = [
 
 
 # CRUD Configuration
-@app.get("/cats", response_model=List[Cat], status_code=status.HTTP_200_OK)
-async def get_cats():
+@app.post("/cats", status_code=status.HTTP_201_CREATED)
+async def add_cat(new_cat: Cat,
+                  breed: Optional[str] = None,
+                  location_of_origin: Optional[str] = None,
+                  coat_length: Optional[int] = None,
+                  body_type: Optional[str] = None,
+                  pattern: Optional[str] = None):
 
-#    if breed:
-#        logging.info('Querying all cats that have {} as breed.'.format(breed))
-#        return [cat for cat in cats if cat["breed"] == breed]
-#
-#    if location_of_origin:
-#        logging.info('Querying all cats that have {} as location of origin.'.format(location_of_origin))
-#        return [cat for cat in cats if cat["location_of_origin"] == location_of_origin]
-#
-#    if coat_length:
-#        logging.info('Querying all cats that have {} as coat length.'.format(coat_length))
-#        return [cat for cat in cats if cat["coat_length"] == coat_length]
-#
-#    if body_type:
-#        logging.info('Querying all cats that have {} as body type.'.format(body_type))
-#        return [cat for cat in cats if cat["body_type"] == body_type]
-#
-#    if pattern:
-#        logging.info('Querying all cats that have {} as pattern.'.format(pattern))
-#        return [cat for cat in cats if cat["pattern"] == pattern]
+    if new_cat.breed:
+        new_cat.breed = new_cat.breed.capitalize()
+        print('oie')
 
-    return cats
-
-
-@app.post("/cats", response_model=Cat, status_code=status.HTTP_201_CREATED)
-async def add_cat(new_cat: Cat):
-
-    # Update entries to check validations
-    new_cat.breed = new_cat.breed.title()
-    new_cat.location_of_origin = new_cat.location_of_origin.title()
-    new_cat.body_type = new_cat.body_type.capitalize()
-    new_cat.pattern = new_cat.pattern.title()
-
-    # Validation: Check if breed is unique
-    if [cat for cat in cats if cat["breed"] == (new_cat.breed)]:
+    if [cat for cat in cats if cat["breed"] == new_cat.breed]:
         logging.error('Breed already exists.')
         raise HTTPException(status_code=406, detail="Breed already exists.")
 
-    # Validation: Check if coat length is a positive integer
-    if (new_cat.coat_length) < 0:
-        logging.error('Coat length must be equal or greater than 0.')
-        raise HTTPException(status_code=406, detail="Coat length must be equal or greater than 0.")
-
-    # Validation: Check if body type matches with predefined values
-    body_types = ['Small', 'Medium', 'Large']
-    if (new_cat.body_type) not in body_types:
-        logging.error('Body type must be Small, Medium or Large')
-        raise HTTPException(status_code=406, detail="Body type must be Small, Medium or Large")
-
-    cats.append(new_cat.dict())
-    logging.info('{} created successfully!'.format((new_cat.breed)))
+    cats.append(new_cat)
+    # logging.info('Added {} cat from {}, with {} coat length, {} body type and {} pattern.'.format(breed, cat['location_of_origin'], cat['coat_length'], cat['body_type'], cat['pattern']))
     return new_cat
+
+#    if location_of_origin:
+#        location_of_origin = location_of_origin.capitalize()
+#        cat['location_of_origin'] = location_of_origin
+#
+#    if coat_length:
+#        cat['coat_length'] = coat_length
+#        if coat_length < 0:
+#            logging.error('Coat length must be equal or greater than 0.')
+#            raise HTTPException(status_code=406, detail="Coat length must be equal or greater than 0.")
+#
+#    if body_type:
+#        body_type = body_type.capitalize()
+#        cat['body_type'] = body_type
+#        body_types = ['Small', 'Medium', 'Large']
+#        if body_type not in body_types:
+#            logging.error('Body type must be Small, Medium or Large')
+#            raise HTTPException(status_code=406, detail="Body type must be Small, Medium or Large")
+#
+#    if pattern:
+#        pattern = pattern.capitalize()
+#        cat['pattern'] = pattern
+
+
+@app.post("/cats", status_code=status.HTTP_201_CREATED)
+async def add_cat(cat: Cat):
+
+    print('breed', cat.breed)
+    print('location_of_origin', cat.location_of_origin)
+    for i in cats:
+        if str(cat.breed) == str(i['breed']):
+            print('o loquinho meu')
+
+
+    cats.append(cat)
+    #logging.info('Added {} cat from {}, with {} coat length, {} body type and {} pattern.'.format(breed, new_cat['location_of_origin'], new_cat['coat_length'], new_cat['body_type'], new_cat['pattern']))
+    return cat
 
 
 @app.patch("/cats/{breed}", response_model=Cat, status_code=status.HTTP_202_ACCEPTED)
@@ -154,9 +156,9 @@ async def delete_cat(breed: str):
 # POST request of three cats
 @app.post("/add_three_cats", status_code=status.HTTP_201_CREATED)
 async def add_three_cats(cat: Cat):
-    await add_cat(Cat(breed='Bengal', location_of_origin='United States', coat_length=1, body_type='Large', pattern='Orange'))
-    await add_cat(Cat(breed='Maine Coon', location_of_origin='United States', coat_length=3, body_type='Large', pattern='Brown Tabby'))
-    await add_cat(Cat(breed='Peterbald', location_of_origin='United States', coat_length=0, body_type='Small', pattern='Grey'))
-
+    await add_cat(cat, 'Bengal', 'United States', 1, 'Large', 'Orange')
+    await add_cat(cat, 'Maine Coon', 'United States', 3, 'Large', 'Brown Tabby')
+    await add_cat(cat, 'Peterbald', 'Russia', 0, 'Small', 'Grey')
     logging.info('Cats added successfully.')
+
     return {'status': 'http_201_created'}
