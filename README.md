@@ -1,6 +1,6 @@
 # Cat API
 
-Desenvolvido com o __FastAPI Framework__, o projeto trata-se da construção de uma API _(Application Programming Interface)_. Os principais recursos a serem implementados são: a manutenção do CRUD _(Create, Read, Update and Delete)_  quanto as chamadas feitas ao back-end relacionadas aos gatos; e a validação dos códigos desenvolvida com o pytest para que incosistências não ocorram.
+Desenvolvido com o __FastAPI Framework__, o projeto trata-se da construção de uma API _(Application Programming Interface)_. Os principais recursos a serem implementados são: a manutenção do CRUD _(Create, Read, Update and Delete)_  quanto as chamadas feitas ao back-end relacionadas aos gatos; e a validação dos códigos desenvolvida com o pytest para que inconsistências não ocorram.
 
 
 ## Como executar o projeto
